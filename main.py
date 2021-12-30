@@ -2,12 +2,12 @@ from data_collector import collect_data
 from trainer import train_recognizer
 from recognizer import recognize_people
 
-people_path = 'people'
-faces_path = 'faces'
-databases_path = 'databases'
-source_path = 'source'
-lbph_database = 'LBPH_1.yml'
-fisher_database = 'Fisher_500_1.yml'
+people_path = 'Data/People'
+faces_path = 'Data/Faces'
+databases_path = 'Data/Database'
+source_path = 'Data/Source'
+lbph_database = 'LBPH_database.yml'
+fisher_database = 'Fisher_database.yml'
 recognizer_name = 'Fisher'
 face_width = 500
 face_height = 500
