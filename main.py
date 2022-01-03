@@ -2,13 +2,12 @@ from data_collector import collect_data
 from trainer import train_recognizer
 from recognizer import recognize_people
 
-people_path = 'Data/People'
-faces_path = 'Data/Faces'
-databases_path = 'Data/Database'
-source_path = 'Data/Source'
+people_path = '../../../Desktop/temp/Data/People'
+faces_path = '../../../Desktop/temp/Data/Faces'
+databases_path = '../../../Desktop/temp/Data/Database'
+source_path = '../../../Desktop/temp/Data/Source'
 lbph_database = 'LBPH_database.yml'
-fisher_database = 'Fisher_database.yml'
-recognizer_name = 'Fisher'
+fisher_database = 'Fischer_database.yml'
 face_width = 500
 face_height = 500
 
@@ -24,7 +23,7 @@ while True:
     elif command == 'CD':
         collect_data(people_path, faces_path)
     elif command == 'TR':
-        train_recognizer(faces_path, databases_path, recognizer_name, face_width, face_height)
+        train_recognizer(faces_path, databases_path, face_width, face_height)
     elif command == 'RP':
         recognize_people(databases_path, fisher_database, lbph_database, source_path, face_width, face_height)
     elif command == 'exit':

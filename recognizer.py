@@ -14,7 +14,7 @@ def recognize_people(databases_path, fisher_database, lbph_database, source_path
 
     print(' Starting face recognition...\n'
           ' You can move to the next photo using space bar')
-    names = ['', 'Abdullah', 'Adrien_Brody', 'Alejandro_Toledo', 'Andy_Roddick', 'Angelina_Jolie', 'Putin', 'Wen_Jiabao']
+    names = ['', 'Abdullah', 'Adrien', 'Alejandro', 'Andy', 'Angelina', 'Putin', 'Wen']
 
     photos_paths = []
     for extension in ['jpg', 'jpeg', 'png']:
