@@ -10,8 +10,17 @@
 </head>
 <body>
     <h1>Upload train dataset</h1>
-    <h2>Put here folder named 'People' with including directories named by persons name. Each directory should consist a
-     JPG, JPEG or PNG files with photo of person</h2>
+    <h2>Enter the name of person, whome images you want to upload and next upload photos. Each image should be in
+     JPG, JPEG or PNG format.</h2>
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name">
+        <input multiple type="file" name="images">
+        <button type="submit">Upload file</button>
+    </form>
+    </div>
+
 
 </body>
 </html>

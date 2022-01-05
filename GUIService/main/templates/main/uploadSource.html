@@ -10,6 +10,11 @@
 </head>
 <body>
     <h1>Upload source</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input multiple type="file" name="images">
+        <button type="submit">Upload file</button>
+    </form>
 
 </body>
 </html>
