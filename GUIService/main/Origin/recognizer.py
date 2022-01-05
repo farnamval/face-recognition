@@ -1,11 +1,11 @@
 import cv2
 from glob import glob
-import image_resizing
-import id_checker
+from . import image_resizing
+from . import id_checker
 
 
 def recognize_people(databases_path, fisher_database, lbph_database, source_path, face_width, face_height):
-    detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+    detector = cv2.CascadeClassifier('C:\\Users\\Admin\\PycharmProjects\\Poly\\face-recognition\\GUIService\\main\\Origin\\haarcascade_frontalface_default.xml')
     recognizer_fisher = cv2.face.FisherFaceRecognizer_create()
     recognizer_fisher.read(databases_path + '\\' + fisher_database)
     recognizer_lbph = cv2.face.LBPHFaceRecognizer_create()

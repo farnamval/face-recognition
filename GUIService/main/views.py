@@ -1,9 +1,10 @@
 import os
 import shutil
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.files.storage import FileSystemStorage
 from .Origin.trainer import train_recognizer
 from .Origin.data_collector import collect_data
+from .Origin.recognizer import recognize_people
 from .Origin import image_resizing
 from GUIService.settings import MEDIA_ROOT
 
@@ -34,10 +35,19 @@ def uploadTrain(request):
             shutil.move(os.path.join(MEDIA_ROOT, i.name), name_dir)
     return render(request, 'main/uploadTrain.html')
 
+
+
+def temp(request):
+    return render(request, 'main/train-fall.html')
+
 def train(request):
-    collect_data(people_path, faces_path)
-    train_recognizer(faces_path, databases_path, face_width, face_height)
-    return render(request, 'main/gui.html')
+    try:
+        collect_data(people_path, faces_path)
+        train_recognizer(faces_path, databases_path, face_width, face_height)
+    except BaseException:
+        return render(request, 'main/train-fall.html')
+    return render(request, 'main/train-complete.html')
+
 
 def uploadSource(request):
     if request.method == 'POST':
@@ -52,4 +62,8 @@ def uploadSource(request):
     return render(request, 'main/uploadSource.html')
 
 def recognize(request):
-    return render(request, 'main/recognize.html')
+    #try:
+    recognize_people(databases_path, fisher_database, lbph_database, source_path, face_width, face_height)
+    #except BaseException:
+        #return render(request, 'main/recognize-fall.html')
+    return render(request, 'main/recognize-complete.html')
