@@ -74,8 +74,14 @@ def launchRecognizer(request):
     dtb_path = os.path.join(os.path.join(pth.users_data_root, recognizerNameTemp), 'cv2DataBases')
     src_path = os.path.join(os.path.join(pth.users_data_root, recognizerNameTemp), 'Source')
 
+    fcs_path = os.path.join(os.path.join(pth.users_data_root, recognizerNameTemp), 'Faces')
+    peoples = os.listdir(fcs_path)
+    names = ['', ]
+    names.extend(peoples)
+
+
     recognizer.recognize_people(dtb_path, cnst.fisher_database, cnst.lbph_database,
-                                src_path, cnst.face_width, cnst.face_height)
+                                src_path, cnst.face_width, cnst.face_height, names)
     for the_file in os.listdir(src_path):
         file_path = os.path.join(src_path, the_file)
         try:

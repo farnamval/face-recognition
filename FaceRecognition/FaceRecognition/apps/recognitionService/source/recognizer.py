@@ -6,7 +6,7 @@ from ..constraits import paths
 
 
 
-def recognize_people(databases_path, fisher_database, lbph_database, source_path, face_width, face_height):
+def recognize_people(databases_path, fisher_database, lbph_database, source_path, face_width, face_height, names):
     detector = cv2.CascadeClassifier(paths.haarcascade_path)
     recognizer_fisher = cv2.face.FisherFaceRecognizer_create()
     recognizer_fisher.read(databases_path + '\\' + fisher_database)
@@ -16,7 +16,7 @@ def recognize_people(databases_path, fisher_database, lbph_database, source_path
 
     print(' Starting face recognition...\n'
           ' You can move to the next photo using space bar')
-    names = ['', 'Abdullah', 'Adrien', 'Alejandro', 'Andy', 'Angelina', 'Putin', 'Wen']
+    #names = ['', 'Abdullah', 'Adrien', 'Alejandro', 'Andy', 'Angelina', 'Putin', 'Wen']
 
     photos_paths = []
     for extension in ['jpg', 'jpeg', 'png']:
