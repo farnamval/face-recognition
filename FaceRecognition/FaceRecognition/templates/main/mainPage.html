@@ -11,32 +11,22 @@
 <body>
     <h1>Face Recognition Service</h1>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-
       <div class="feature col">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-        </div>
-        <h2>Recognize people</h2>
-        <p>Upload photos you need to recognize via pre-trained program and start a process of recognizing people. </p>
         <body>
-        <form action="/recognize"/>
-          <button type="submit">Start recognition</button>
-        </form>
-    </body>
+            <form action="/recognize"/>
+             <button type="submit" class="btn btn-success form-control">Recognize</button>
+            </form>
+        </body>
+        <p>Upload photos you need to recognize via pre-trained program and start a process of recognizing people. </p>
       </div>
 
       <div class="feature col">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-        </div>
-        <h2>Create new recognizer</h2>
-        <p>Use this if you want to upload a new train dataset and create your own recognizer based on it.</p>
         <body>
-        <form action="/create-recognizer/">
-          <button type="submit">Start creation</button>
-        </form>
-
-    </body>
+            <form action="/create-recognizer/"/>
+             <button type="submit" class="btn btn-success form-control">Create Recognizer</button>
+            </form>
+        </body>
+        <p>Use this if you want to upload a new train dataset and create your own recognizer based on it.</p>
       </div>
     </div>
 </body>

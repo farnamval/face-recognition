@@ -10,18 +10,20 @@
 </head>
 <body>
     <h1>Upload source</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div class="container">
-          <input multiple type="file" name="images">
-          <button type="submit">Upload file</button>
-        </div>
-     </form>
-    <body>
-        <form action="/recognize/launch-recognizer/">
-          <button type="submit">Start Recognizer</button>
-        </form>
-    </body>
+    <h5>Upload photos you want to recognize.</h5>
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
 
+          <input multiple type="file" name="images" class="form-control"> <br>
+          <button type="submit" class="btn btn-success ">Upload files</button>
+        </form>
+
+        <form action="/recognize/launch-recognizer/">
+            <br> <br>
+          <button type="submit" class="btn btn-success form-control">Start Recognizer</button>
+        </form>
+
+    </div>
 </body>
 </html>

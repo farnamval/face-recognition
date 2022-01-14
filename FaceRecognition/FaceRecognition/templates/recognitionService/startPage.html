@@ -13,31 +13,31 @@
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
 
       <div class="feature col">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-        </div>
-        <h2>I have my own recognizer</h2>
-        <p>Push the button below if you set up a recognizer before</p>
-        <body>
         <form action="/recognize/log-in-user-recognizer/"/>
-          <button type="submit">Start recognition</button>
+          <button type="submit" class="btn btn-success form-control">I have my own recognizer</button>
         </form>
-    </body>
+        <p>Push this if you set up a recognizer before</p>
       </div>
+
 
       <div class="feature col">
-        <div class="feature-icon bg-primary bg-gradient">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-        </div>
-        <h2>I wan to test this programm</h2>
-        <p>Use this if you want to test the programm with test pre-trained recognizer</p>
-        <body>
+      <body>
         <form action="/recognize/test-recognizer/">
-          <button type="submit">Start recognition</button>
+          <button type="submit" class="btn btn-success form-control">I wan to test this programm</button>
         </form>
+      </body>
+        <p>Use this if you want to test the programm with test pre-trained recognizer</p>
 
-    </body>
       </div>
     </div>
+
+
 </body>
+
+<div class="btn">
+    <form action="/">
+      <button type="submit" class="btn btn-success"><N>Home</N></button>
+    </form>
+</div>
+
 </html>

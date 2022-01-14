@@ -15,22 +15,17 @@
    <div class="container">
       <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="container">
-          Person name:
-          <input type="text" name="name">
-        </div>
-        <div class="container">
-          <input multiple type="file" name="images">
-          <button type="submit">Upload file</button>
-        </div>
+          <input type="text" name="name" class="form-control" placeholder="Person name">
+          <input multiple type="file" name="images" class="form-control"> <br>
+          <button type="submit" class="btn btn-success ">Upload files</button>
      </form>
-    </div>
 
-     <body>
         <form action="/create-recognizer/train/">
-          <button type="submit"><N>Start train</N></button>
+            <br> <br>
+          <button type="submit" class="btn btn-success form-control"><N>Start train</N></button>
         </form>
-      </body>
+
+   </div>
 
 
 </body>

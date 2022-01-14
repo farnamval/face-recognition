@@ -20,8 +20,9 @@ def start(request):
     return render(request, "recognitionService/startPage.html")
 
 def testRecognizer(request):
+    names = ['', 'Abdullah', 'Adrien', 'Andy']
     recognizer.recognize_people(pth.cv2DataBases_path_test, cnst.fisher_database, cnst.lbph_database,
-                                pth.source_path_test, cnst.face_width, cnst.face_height)
+                                pth.source_path_test, cnst.face_width, cnst.face_height, names)
     return render(request, "recognitionService/recognize-complete.html")
 
 def loginRecognizer(request):
