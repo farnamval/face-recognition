@@ -3,8 +3,8 @@ from . import views
 
 urlpatterns = [
     path('', views.register),
-    path('check-login/', views.checkLogin),
     path('upload-Data/', views.uploadData),
-    path('train/', views.train)
+    path('train/', views.train),
+    path('get-users-database/', views.getUsers)
     #path('create-recognizer', include('trainService.views'), name='train')
 ]

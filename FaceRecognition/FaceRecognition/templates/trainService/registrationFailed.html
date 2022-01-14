@@ -12,24 +12,15 @@
     <h1>Registration of new recognizer</h1>
     <h5>Registration failed:( Login you have entered is already exist. Please, try again</h5>
    <div class="container">
-      <form method="post" enctype="multipart/form-data">
-        <div class="container">
-          Login:
-          <input type="text" name="name">
-        </div>
-        <div class="container">
-          Password:
-          <input type="text" name="name">
-        </div>
+      <form method="post" enctype="multipart/form-data" action="/create-recognizer/check-login/">
+         {% csrf_token %}
+         {{ form.login }}<br>
+         {{ form.password }}<br>
+          <span>{{ error }}</span>
+
+        <button type="submit" class="btn btn-success form-control"><N>Start a creation</N></button>
      </form>
     </div>
-
-     <body>
-        <form action="/create-recognizer/check-login/">
-          <button type="submit"><N>Start a creation</N></button>
-        </form>
-      </body>
-
 
 </body>
 </html>
