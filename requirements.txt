@@ -5,3 +5,4 @@ opencv-contrib-python==4.5.5.62
 opencv-python==4.5.5.62
 sqlparse==0.4.2
 tzdata==2021.5
+pytest-django==4.5.2

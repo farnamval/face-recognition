@@ -3,6 +3,7 @@ import os
 from glob import glob
 from ..constraits import paths
 
+
 def collect_data(people_path, faces_path):
     detector = cv2.CascadeClassifier(paths.haarcascade_path)
     print(' Building a database of faces...')

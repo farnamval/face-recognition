@@ -1,5 +1,3 @@
-
-
 def check_ids(people, confidence, number_of_ids):
     temp_array = []
     for i in range(number_of_ids):

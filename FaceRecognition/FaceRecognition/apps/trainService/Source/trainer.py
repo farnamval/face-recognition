@@ -3,8 +3,8 @@ import os
 from glob import glob
 import numpy
 from . import image_resizing
-#from .constraits import constants as cnst
 from ..constraits import constants as cnst
+
 
 def train_recognizer(faces_path, databases_path, face_width=500, face_height=500):
     recognizer_LBPH = cv2.face.LBPHFaceRecognizer_create()

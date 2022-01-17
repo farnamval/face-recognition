@@ -2,7 +2,7 @@ import hashlib
 
 from .models import UserRecognizer
 from django.forms import ModelForm, TextInput, PasswordInput
-import bcrypt
+
 
 class UserRecognizerForm(ModelForm):
     class Meta:
