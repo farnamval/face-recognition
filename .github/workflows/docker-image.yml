@@ -25,4 +25,4 @@ jobs:
     - name: Tag Docker Image
       run: docker tag face-recognition kz16/face-recognition
     - name: Push the Docker image
-      run: docker push kz16/face-recognition
+      run: docker push kz16/face-recognition:latest
