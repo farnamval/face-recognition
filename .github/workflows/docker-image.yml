@@ -21,7 +21,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile
+      run: docker build . --file Dockerfile --tag face-recognition:latest
     - name: Tag Docker Image
       run: docker tag face-recognition kz16/face-recognition
     - name: Push the Docker image
