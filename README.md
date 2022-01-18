@@ -2,7 +2,7 @@
 
 * [Introduction](https://github.com/farnamval/face-recognition#introduction)
 * [Contributors](https://github.com/farnamval/face-recognition#contributors)
-* [Common libraries & dependencies](https://github.com/farnamval/face-recognition#common-libraries-&-dependencies)
+* [Common libraries & dependencies](https://github.com/farnamval/face-recognition#common-libraries--dependencies)
 
 ## Introduction
 
@@ -20,10 +20,7 @@ Using form of CD: containerization using docker
 
 ## Common libraries & dependencies
 
-OpenCV
-
-Django
-
-PyTest
-
-Docker
+* OpenCV
+* Django
+* PyTest
+* Docker
