@@ -4,8 +4,8 @@ import shutil
 import cv2
 
 
-original_path = "test_resize_image\\original_picture.jpg"
-test_path = "test_resize_image\\test_picture.jpg"
+original_path = "test_resize_image/original_picture.jpg"
+test_path = "test_resize_image/test_picture.jpg"
 
 
 def create_picture_copy(original, test):
