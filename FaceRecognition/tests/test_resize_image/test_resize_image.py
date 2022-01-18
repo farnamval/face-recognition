@@ -20,7 +20,8 @@ def test_resize_image_no_parameters():
 
 @pytest.mark.parametrize("width, height, expected_shape",
                          [(1600, 900, (900, 1600, 3)),
-                          (900, 1600, (506, 900, 3))])
+                          (900, 1600, (506, 900, 3)),
+                          (900, 900, (506, 900, 3))])
 def test_resize_image_with_width_and_height(width, height, expected_shape):
     create_picture_copy(original_path, test_path)
     test_image = cv2.imread(test_path)
