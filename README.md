@@ -1,7 +1,7 @@
 ## Table of contents
 
 * [Introduction](https://github.com/farnamval/face-recognition#introduction)
-* [How to start](https://github.com/farnamval/face-recognition#common-libraries--dependencies)
+* [How to start](https://github.com/farnamval/face-recognition#how-to-start)
 * [Contributors](https://github.com/farnamval/face-recognition#contributors)
 * [Common libraries & dependencies](https://github.com/farnamval/face-recognition#common-libraries--dependencies)
 
